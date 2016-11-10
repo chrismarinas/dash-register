@@ -1,0 +1,12 @@
+{
+  "name": "dash-register",
+  "version": "0.0.1",
+  "description": "Register modules to dashboard",
+  "main": "bin/dash-register.js",
+  "repository": {
+    "url": "https://github.com/chrismarinas/dash-register.git",
+    "type": "git"
+  },
+  "author": "Chris Marinas <chris.marinas@gmail.com>",
+  "license": "MIT"
+}
