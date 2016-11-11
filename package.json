@@ -3,9 +3,14 @@
   "version": "0.0.1",
   "description": "Register modules to dashboard",
   "bin": {
-    "register": "./bin/register.js"
+    "register": "./dist/register.js"
   },
-  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "preinstall": "npm run build"
+  },
+  "main": "./dist/register.js",
+  "private": true,
   "repository": {
     "url": "https://github.com/chrismarinas/dash-register.git",
     "type": "git"
@@ -14,6 +19,13 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^1.1.3",
-    "progress": "^1.1.8"
+    "cli-usage": "^0.1.4",
+    "minimist": "^1.2.0",
+    "shelljs": "^0.7.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-3": "^6.17.0"
   }
 }
