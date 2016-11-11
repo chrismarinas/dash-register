@@ -3,13 +3,13 @@
   "version": "0.0.1",
   "description": "Register modules to dashboard",
   "bin": {
-    "register": "./dist/register.js"
+    "register": "./bin/register.js"
   },
   "scripts": {
-    "build": "babel src --out-dir dist",
+    "build": "babel src --out-dir bin",
     "preinstall": "npm run build"
   },
-  "main": "./dist/register.js",
+  "main": "./bin/register.js",
   "private": true,
   "repository": {
     "url": "https://github.com/chrismarinas/dash-register.git",
