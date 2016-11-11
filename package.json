@@ -6,8 +6,7 @@
     "register": "./bin/register.js"
   },
   "scripts": {
-    "build": "babel src --out-dir bin",
-    "postinstall": "npm run build"
+    "build": "babel src --out-dir bin"
   },
   "main": "./bin/register.js",
   "private": true,
