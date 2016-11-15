@@ -1,13 +1,14 @@
 {
   "name": "dash-register",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Register modules to dashboard",
   "bin": {
     "register": "./bin/register.js"
   },
   "main": "./bin/register.js",
   "scripts": {
-    "dev": "babel-node ./bin/register.js"
+    "dev": "babel-node ./src/register.js",
+    "build": "babel src --out-dir bin"
   },
   "private": true,
   "repository": {
