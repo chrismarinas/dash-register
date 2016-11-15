@@ -35,7 +35,8 @@ var argv = (0, _minimist2.default)(process.argv.slice(2));
 var PATHS = {
   npm: {
     json: 'package.json',
-    install: 'npm install'
+    install: 'npm install --save',
+    installDir: 'node_modules'
   },
   modules: {
     manifest: 'manifest.json',
@@ -78,9 +79,12 @@ var dashModule = argv._[0];
 if (typeof dashModule !== 'undefined') {
   _shelljs2.default.exec(PATHS.npm.install + ' ' + dashModule);
 
+  var moduleName = (0, _lodash2.default)(dashModule).split('/').last().split('.')[0];
+  var modulePath = _path2.default.resolve(process.cwd(), _path2.default.join(PATHS.npm.installDir, moduleName));
+
   // Check if module manifest exists
   try {
-    manifest = require(PATHS.modules.manifest);
+    manifest = require(_path2.default.join(modulePath, PATHS.modules.manifest));
   } catch (error) {
     if (error.code === 'MODULE_NOT_FOUND') {
       console.error((0, _chalk.red)('Could not find ' + (0, _chalk.white)(PATHS.modules.manifest) + '.'));
