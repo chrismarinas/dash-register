@@ -6,6 +6,9 @@
     "register": "./bin/register.js"
   },
   "main": "./bin/register.js",
+  "scripts": {
+    "dev": "babel-node ./bin/register.js"
+  },
   "private": true,
   "repository": {
     "url": "https://github.com/chrismarinas/dash-register.git",
@@ -14,8 +17,14 @@
   "author": "Chris Marinas <chris.marinas@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-3": "^6.17.0",
+    "bluebird": "^3.4.6",
     "chalk": "^1.1.3",
     "cli-usage": "^0.1.4",
+    "jsonfile": "^2.4.0",
+    "lodash": "^4.17.0",
     "minimist": "^1.2.0",
     "shelljs": "^0.7.5"
   }
